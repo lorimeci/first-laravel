@@ -19,5 +19,12 @@
             </div>
         </div>
     </div>
+    <div class="float-left">
+        <a 
+        class="border-b-2 pb-2 border-dotted italic text-green-500"
+        href="cars">
+           Cars &rarr;
+        </a>
+    </div>
 </div>
 @endsection

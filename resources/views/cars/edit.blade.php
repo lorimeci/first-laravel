@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('content')
+{{-- @section('content') --}}
 
 <div class="m-auto w-4/8 py-24">
     <div class="text-center">
@@ -9,11 +9,11 @@
        
     </div>
     <div class="flex justify-center pt-20">
-        <h1> PROVAAAAAAAA</h1>
-       {{-- <form action="/cars/{{ $car->id }}" method="POST">
+       <form action="/cars/{{ $car->id }}" method="POST">
         @csrf
         @method('PUT')
         <div class="block">
+            @if (isset(Auth::user()->id))
             <input 
             type="file"
             class="block shadow-5xl mb-10 p-2 w-80 italic
@@ -45,8 +45,9 @@
             <button type ="submit" class="bg-green-500 block shadow-5xl mb-10 p-2 w-80 uppercase font-bold">
                 Submit
             </button>
+            @endif
         </div>   
-       </form> --}}
+       </form>
     </div>
     @if ($errors->any()){
         <div class="w-4/8 m-auto text-center">
@@ -63,4 +64,4 @@
 
 {{-- @endif --}}
 
-@endsection
+{{-- @endsection --}}
